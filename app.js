@@ -37,6 +37,8 @@ const translations = {
     menuFoodNote: "Delivery and local finds",
     menuShopping: "Shopping",
     menuShoppingNote: "Marketplaces and deals",
+    menuAi: "AI & search",
+    menuAiNote: "Yuanbao, DeepSeek, Kimi + more",
     menuStudent: "Student life",
     menuStudentNote: "Study and social",
     menuLongstay: "Long stay",
@@ -114,6 +116,8 @@ const translations = {
     menuFoodNote: "Livraison et adresses",
     menuShopping: "Shopping",
     menuShoppingNote: "Marchés et promos",
+    menuAi: "IA et recherche",
+    menuAiNote: "Yuanbao, DeepSeek, Kimi + autres",
     menuStudent: "Vie étudiante",
     menuStudentNote: "Études et sorties",
     menuLongstay: "Long séjour",
@@ -178,6 +182,7 @@ const categories = [
   { id: "video", label: { en: "Video", fr: "Vidéo" } },
   { id: "music", label: { en: "Music", fr: "Musique" } },
   { id: "news", label: { en: "News", fr: "Actualités" } },
+  { id: "ai", label: { en: "AI & Search", fr: "IA et recherche" } },
   { id: "education", label: { en: "Education", fr: "Éducation" } },
   { id: "realestate", label: { en: "Real Estate", fr: "Immobilier" } },
   { id: "work", label: { en: "Work", fr: "Travail" } }
@@ -274,6 +279,131 @@ const apps = [
     caution: { en: "TenPayGo is a standalone app, separate from WeChat Pay. It only works at Weixin Pay merchants in mainland China, not Alipay; card or currency conversion fees may apply.", fr: "TenPayGo est une app autonome, distincte de WeChat Pay. Elle fonctionne seulement chez les commerçants Weixin Pay en Chine continentale, pas Alipay ; des frais de carte ou de change peuvent s'appliquer." },
     similar: "WeChat Pay without a WeChat account",
     store: "TenPayGo"
+  },
+  {
+    id: "yuanbao",
+    cn: "腾讯元宝",
+    en: "Tencent Yuanbao",
+    category: "ai",
+    categories: ["ai"],
+    icon: "元",
+    color: "#2f6fde",
+    essential: false,
+    desc: { en: "Tencent's free AI assistant with Hunyuan and DeepSeek models, plus a live translation mode for travel.", fr: "L'assistant IA gratuit de Tencent avec les modèles Hunyuan et DeepSeek, et un mode de traduction en direct pour les voyages." },
+    tags: ["AI", "Translation", "Free"],
+    badge: { en: "Free + translation", fr: "Gratuit + traduction" },
+    badgeType: "good",
+    note: { en: "Best free AI all-rounder", fr: "Le plus complet gratuit" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Chinese-first, English replies work", fr: "Interface chinoise, réponses en anglais possibles" },
+    bestFor: { en: "Free AI and live translation", fr: "IA gratuite et traduction en direct" },
+    steps: {
+      en: ["Install Tencent Yuanbao.", "Sign in with WeChat or QQ if possible.", "Switch between Hunyuan and DeepSeek models.", "Open translation mode for live conversations."],
+      fr: ["Installez Tencent Yuanbao.", "Connectez-vous avec WeChat ou QQ si possible.", "Passez d'un modèle Hunyuan à DeepSeek.", "Ouvrez le mode traduction pour les conversations en direct."]
+    },
+    caution: { en: "The interface is Chinese-first; ask for English answers when needed.", fr: "L'interface est d'abord en chinois ; demandez des réponses en anglais au besoin." },
+    similar: "ChatGPT + Google Translate",
+    store: "Tencent Yuanbao"
+  },
+  {
+    id: "deepseek",
+    cn: "深度求索",
+    en: "DeepSeek",
+    category: "ai",
+    categories: ["ai"],
+    icon: "深",
+    color: "#4d6bfe",
+    essential: false,
+    desc: { en: "Free Chinese AI assistant from DeepSeek, strong at reasoning, coding, and writing, with reliable access in China.", fr: "Assistant IA chinois gratuit de DeepSeek, fort en raisonnement, code et rédaction, avec un accès fiable en Chine." },
+    tags: ["AI", "Free", "Reasoning"],
+    badge: { en: "Free AI", fr: "IA gratuite" },
+    badgeType: "good",
+    note: { en: "Great in China", fr: "Très utile en Chine" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "English interface available", fr: "Interface anglaise disponible" },
+    bestFor: { en: "Reasoning, coding, and writing", fr: "Raisonnement, code et rédaction" },
+    steps: {
+      en: ["Install the official DeepSeek app.", "Create an account with email or phone.", "Use chat or reasoning mode for hard questions.", "Ask for English answers when needed."],
+      fr: ["Installez l'app officielle DeepSeek.", "Créez un compte avec email ou téléphone.", "Utilisez le mode raisonnement pour les questions difficiles.", "Demandez des réponses en anglais au besoin."]
+    },
+    caution: { en: "The free service can be busy at peak times; verify important answers.", fr: "Le service gratuit peut être saturé aux heures de pointe ; vérifiez les réponses importantes." },
+    similar: "ChatGPT",
+    store: "DeepSeek"
+  },
+  {
+    id: "kimi",
+    cn: "Kimi",
+    en: "Kimi",
+    category: "ai",
+    categories: ["ai"],
+    icon: "K",
+    color: "#181818",
+    essential: false,
+    desc: { en: "Moonshot AI's premium Chinese assistant, the strongest pick for long documents, research, and polished writing.", fr: "L'assistant chinois premium de Moonshot AI, le meilleur choix pour les documents longs, la recherche et la rédaction soignée." },
+    tags: ["AI", "Premium", "Long context"],
+    badge: { en: "Best premium", fr: "Meilleur premium" },
+    badgeType: "good",
+    note: { en: "Premium Chinese AI", fr: "IA chinoise premium" },
+    setup: { en: "Medium", fr: "Moyenne" },
+    foreigner: { en: "Chinese-first, strong for documents", fr: "Interface chinoise, fort pour les documents" },
+    bestFor: { en: "Long documents and polished writing", fr: "Documents longs et rédaction soignée" },
+    steps: {
+      en: ["Install Kimi and create an account.", "Upload long documents or research material.", "Ask for summaries, analysis, or drafts.", "Check subscription options for heavier use."],
+      fr: ["Installez Kimi et créez un compte.", "Importez des documents longs ou des sources.", "Demandez résumés, analyses ou brouillons.", "Vérifiez les options d'abonnement pour un usage intensif."]
+    },
+    caution: { en: "Many premium features require a subscription, and the free tier can be rate-limited.", fr: "De nombreuses fonctions premium demandent un abonnement, et le niveau gratuit peut être limité." },
+    similar: "Claude + ChatGPT",
+    store: "Kimi"
+  },
+  {
+    id: "doubao",
+    cn: "豆包",
+    en: "Doubao",
+    category: "ai",
+    categories: ["ai"],
+    icon: "豆",
+    color: "#2f9e44",
+    essential: false,
+    desc: { en: "ByteDance's fast, simple AI assistant for quick answers, summaries, and everyday tasks.", fr: "L'assistant IA rapide et simple de ByteDance pour les réponses, résumés et tâches du quotidien." },
+    tags: ["AI", "Fast", "Everyday"],
+    badge: { en: "Fast but basic", fr: "Rapide mais basique" },
+    badgeType: "caution",
+    note: { en: "Quick answers, not deep work", fr: "Réponses rapides, pas de travail profond" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Simple, Chinese-first", fr: "Simple, interface chinoise" },
+    bestFor: { en: "Fast everyday answers", fr: "Réponses rapides du quotidien" },
+    steps: {
+      en: ["Install Doubao and open the chat.", "Ask a quick question or upload a photo.", "Use it for summaries and everyday tasks.", "Switch apps for deeper reasoning."],
+      fr: ["Installez Doubao et ouvrez le chat.", "Posez une question rapide ou importez une photo.", "Utilisez-le pour les résumés et tâches simples.", "Changez d'app pour un raisonnement plus profond."]
+    },
+    caution: { en: "Fast but less reliable for complex reasoning or important facts.", fr: "Rapide mais moins fiable pour le raisonnement complexe ou les faits importants." },
+    similar: "ChatGPT quick answers",
+    store: "Doubao"
+  },
+  {
+    id: "bing",
+    cn: "必应",
+    en: "Bing",
+    category: "ai",
+    categories: ["ai"],
+    icon: "必",
+    color: "#0078d4",
+    essential: false,
+    desc: { en: "Microsoft's search engine, accessible in China and the easiest Google replacement for web, image, and map searches.", fr: "Le moteur de recherche de Microsoft, accessible en Chine et le remplacement le plus simple de Google pour le web, les images et les cartes." },
+    tags: ["Search", "Google alternative"],
+    badge: { en: "Google replacement", fr: "Alternative à Google" },
+    badgeType: "good",
+    note: { en: "Use for web search", fr: "Pour la recherche web" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "English results available", fr: "Résultats en anglais disponibles" },
+    bestFor: { en: "Searching the web in China", fr: "Recherche web en Chine" },
+    steps: {
+      en: ["Install Bing or open cn.bing.com.", "Set Bing as your default search engine.", "Use image and map search as needed.", "Check local availability for some results."],
+      fr: ["Installez Bing ou ouvrez cn.bing.com.", "Définissez Bing comme moteur par défaut.", "Utilisez la recherche d'images et de cartes selon besoin.", "Vérifiez la disponibilité locale de certains résultats."]
+    },
+    caution: { en: "Some results and Microsoft services may be limited or redirected in mainland China.", fr: "Certains résultats et services Microsoft peuvent être limités ou redirigés en Chine continentale." },
+    similar: "Google Search",
+    store: "Bing"
   },
   {
     id: "amap",
@@ -1006,6 +1136,31 @@ const iconAssets = {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6d/5d/c9/6d5dc9e6-0d75-4a7e-67be-e7466f1fa44a/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.jpeg/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/us/app/tenpaygo/id6778755338?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.wxpai"
+  },
+  yuanbao: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/81/54/e9/8154e998-73d2-d1ec-9ed0-b383f2e445e7/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6480446430?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat"
+  },
+  deepseek: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/38/c4/cb38c4e2-3a04-5f92-eb04-67a943c32ed1/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6737597349?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.deepseek.chat"
+  },
+  kimi: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5e/7d/2d/5e7d2db4-8e41-cde1-bfd4-d8ad108ea342/AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6474233312?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.moonshot.kimichat"
+  },
+  doubao: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/97/22/769722f0-2b89-f875-278d-25f78101f454/AppIcon-0-0-1x_U007epad-0-8-0-sRGB-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6459478672?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.larus.nova"
+  },
+  bing: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/f6/f2/13f6f204-d41c-e87e-9f2d-6763eed5c453/AppIcon-0-1x_U007epad-0-1-0-0-85-220-0.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id1114765817?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.microsoft.bing"
   },
   amap: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/09/a3/1509a39d-42f1-ee06-0653-9b5863c83819/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",

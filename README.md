@@ -21,6 +21,7 @@ It includes:
 - Shareable deep links for sections and filters, such as `#basics`, `#payments`, `#transport`, and `#tips`.
 - Responsive two-column app grid on wide screens, scroll-snap starter packs, and a first-week tips section.
 - Full original app coverage from the upstream project, plus Dianping and TenPayGo.
+- AI and search picks: Tencent Yuanbao (Hunyuan + DeepSeek, live translation), DeepSeek, Kimi, Doubao, and Bing as a Google replacement.
 - Duplicate concepts are folded together where it helps users: WeChat Pay is covered inside WeChat instead of appearing as a second WeChat card.
 - A prominent Wise/Revolut recommendation for linking a foreign card in both WeChat Pay and Alipay.
 - Practical app cards with real remote app icons, setup badges, and fallback initials.

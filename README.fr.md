@@ -22,7 +22,7 @@ Elle inclut :
 - Grille d'apps responsive à deux colonnes sur grand écran, packs de départ avec défilement aimanté et section de conseils.
 - Couverture complète des apps du projet original, avec Dianping et TenPayGo en plus.
 - Sélection IA et recherche : Tencent Yuanbao (Hunyuan + DeepSeek, traduction en direct), DeepSeek, Kimi, Doubao et Bing comme alternative à Google.
-- Ajouts logement et transport : Ziroom, Wellcee, Trip.com et HelloBike (aussi disponible dans Alipay). Arrivée utilise désormais Yuanbao au lieu de 12306.
+- Ajouts logement et transport : Ziroom, Wellcee, Trip.com et HelloBike (aussi disponible dans Alipay). Arrivée utilise désormais Yuanbao au lieu de 12306 et Trip.com au lieu de Ctrip.
 - VPN pour 2026 : Mullvad (recommandé), Astrill (lent et cher) et Surfshark (mode No Border).
 - Les concepts en doublon sont regroupés quand c'est plus clair : WeChat Pay est couvert dans WeChat au lieu d'apparaître comme une deuxième carte WeChat.
 - Une recommandation forte pour lier une carte Wise ou Revolut à WeChat Pay et à Alipay.

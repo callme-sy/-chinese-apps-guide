@@ -18,6 +18,8 @@ https://github.com/chris-topher-code/-chinese-apps-guide
 - 入门套装：到达、支付、交通、吃喝、购物、学生生活和长期居住。
 - 支持按应用名、中文名、任务、分类或设置提示搜索。
 - 分类筛选。
+- 支持 `#basics`、`#payments`、`#transport`、`#tips` 等可分享的区块和筛选深链接。
+- 宽屏双列应用网格、可滚动的入门套装和第一周提示区块。
 - 保留上游原项目的完整应用覆盖，并新增 Dianping 和 TenPayGo。
 - 对容易重复的概念做合并：WeChat Pay 放进 WeChat 说明里，不再作为第二张 WeChat 卡片展示。
 - 在支付区域用醒目样式强烈建议在微信支付和支付宝中绑定 Wise 或 Revolut 卡。

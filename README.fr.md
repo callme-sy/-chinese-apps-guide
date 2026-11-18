@@ -18,6 +18,8 @@ Elle inclut :
 - Packs de départ pour l'arrivée, les paiements, le transport, les repas, le shopping, la vie étudiante et les longs séjours.
 - Recherche par nom d'app, nom chinois, besoin, catégorie ou conseil de configuration.
 - Filtres par catégories.
+- Liens profonds partageables pour les sections et filtres, comme `#basics`, `#payments`, `#transport` et `#tips`.
+- Grille d'apps responsive à deux colonnes sur grand écran, packs de départ avec défilement aimanté et section de conseils.
 - Couverture complète des apps du projet original, avec Dianping et TenPayGo en plus.
 - Les concepts en doublon sont regroupés quand c'est plus clair : WeChat Pay est couvert dans WeChat au lieu d'apparaître comme une deuxième carte WeChat.
 - Une recommandation forte pour lier une carte Wise ou Revolut à WeChat Pay et à Alipay.

@@ -19,9 +19,32 @@ const translations = {
     shoppingCompare: "Taobao has everything, JD is stronger for reliable electronics and delivery, Pinduoduo is deal-heavy but harder for beginners.",
     transportCompare: "Amap is the map and transit brain. Didi is the ride-hailing backup when public transport is not enough.",
     navHome: "Home",
-    navPacks: "Packs",
+    navBasics: "Basics",
     navCompare: "Compare",
     navTips: "Tips",
+    skipToGuide: "Skip to the app guide",
+    menuEyebrow: "Guide sections",
+    menuTitle: "Jump to",
+    menuBasics: "Basics",
+    menuBasicsNote: "Starter packs",
+    menuApps: "All apps",
+    menuAppsNote: "Full list",
+    menuPayments: "Payments",
+    menuPaymentsNote: "WeChat Pay, Alipay, TenPayGo",
+    menuTransport: "Transport",
+    menuTransportNote: "Maps, rides, trains",
+    menuFood: "Food",
+    menuFoodNote: "Delivery and local finds",
+    menuShopping: "Shopping",
+    menuShoppingNote: "Marketplaces and deals",
+    menuStudent: "Student life",
+    menuStudentNote: "Study and social",
+    menuLongstay: "Long stay",
+    menuLongstayNote: "Housing and work",
+    menuCompare: "Compare apps",
+    menuCompareNote: "Which one to use",
+    menuTips: "First-week tips",
+    menuTipsNote: "Before you land",
     emptyTitle: "No apps found",
     emptyCopy: "Try another task, app name, or category.",
     choosePlatform: "Choose platform",
@@ -41,8 +64,17 @@ const translations = {
     searchWeb: "Search web",
     starterCopy: "Open store searches for the first-week essentials.",
     appStoreCopy: (name) => `Choose where to search for ${name}.`,
-    tipsTitle: "First-week tip",
-    tipsBody: "Install WeChat, Alipay, a map app, and a translation app before landing. Payment and identity rules change, so verify setup requirements in the app before relying on it."
+    tipsEyebrow: "Before you land",
+    tipsTitle: "First-week tips",
+    tipsBody: "Install WeChat, Alipay, a map app, and a translation app before landing. Payment and identity rules change, so verify setup requirements in the app before relying on it.",
+    tipInstallTitle: "Install before landing",
+    tipInstallBody: "Download WeChat, Alipay, Amap, and a translation app while you still have fast, unrestricted Wi-Fi.",
+    tipPayTitle: "Set up payments early",
+    tipPayBody: "Link a Wise or Revolut card in both WeChat Pay and Alipay, then test a small QR payment before depending on it.",
+    tipAddressTitle: "Save addresses in Chinese",
+    tipAddressBody: "Keep your hotel, school, or apartment address in Chinese so taxi drivers and delivery couriers can find you.",
+    tipDataTitle: "Stay connected",
+    tipDataBody: "Arrange roaming or a China eSIM before you fly, and carry a power bank for long days out."
   },
   fr: {
     eyebrow: "Guide de survie pour la première semaine",
@@ -64,9 +96,32 @@ const translations = {
     shoppingCompare: "Taobao a presque tout, JD est plus fiable pour l'électronique et la livraison, Pinduoduo est très orienté promotions mais moins simple pour débuter.",
     transportCompare: "Amap est le cerveau pour cartes et transports. Didi sert de solution de secours pour les taxis et voitures privées.",
     navHome: "Accueil",
-    navPacks: "Packs",
+    navBasics: "Bases",
     navCompare: "Comparer",
     navTips: "Conseils",
+    skipToGuide: "Aller au guide des apps",
+    menuEyebrow: "Sections du guide",
+    menuTitle: "Aller à",
+    menuBasics: "Bases",
+    menuBasicsNote: "Packs de départ",
+    menuApps: "Toutes les apps",
+    menuAppsNote: "Liste complète",
+    menuPayments: "Paiement",
+    menuPaymentsNote: "WeChat Pay, Alipay, TenPayGo",
+    menuTransport: "Transport",
+    menuTransportNote: "Cartes, VTC, trains",
+    menuFood: "Manger",
+    menuFoodNote: "Livraison et adresses",
+    menuShopping: "Shopping",
+    menuShoppingNote: "Marchés et promos",
+    menuStudent: "Vie étudiante",
+    menuStudentNote: "Études et sorties",
+    menuLongstay: "Long séjour",
+    menuLongstayNote: "Logement et travail",
+    menuCompare: "Comparer les apps",
+    menuCompareNote: "Laquelle choisir",
+    menuTips: "Conseils première semaine",
+    menuTipsNote: "Avant d'arriver",
     emptyTitle: "Aucune app trouvée",
     emptyCopy: "Essayez un autre besoin, nom d'app ou catégorie.",
     choosePlatform: "Choisir la plateforme",
@@ -86,8 +141,17 @@ const translations = {
     searchWeb: "Recherche web",
     starterCopy: "Ouvrir les recherches store pour les essentiels de la première semaine.",
     appStoreCopy: (name) => `Choisissez où rechercher ${name}.`,
-    tipsTitle: "Conseil première semaine",
-    tipsBody: "Installez WeChat, Alipay, une app de cartes et une app de traduction avant d'arriver. Les règles de paiement et d'identité changent souvent, donc vérifiez les exigences dans l'app."
+    tipsEyebrow: "Avant d'arriver",
+    tipsTitle: "Conseils première semaine",
+    tipsBody: "Installez WeChat, Alipay, une app de cartes et une app de traduction avant d'arriver. Les règles de paiement et d'identité changent souvent, donc vérifiez les exigences dans l'app.",
+    tipInstallTitle: "Installez avant le départ",
+    tipInstallBody: "Téléchargez WeChat, Alipay, Amap et une app de traduction avec un Wi-Fi rapide et sans restrictions.",
+    tipPayTitle: "Préparez les paiements tôt",
+    tipPayBody: "Liez une carte Wise ou Revolut à WeChat Pay et à Alipay, puis testez un petit paiement QR avant d'en dépendre.",
+    tipAddressTitle: "Gardez les adresses en chinois",
+    tipAddressBody: "Conservez l'adresse de votre hôtel, école ou appartement en chinois pour les taxis et les livreurs.",
+    tipDataTitle: "Restez connecté",
+    tipDataBody: "Activez l'itinérance ou une eSIM Chine avant le départ, et emportez une batterie externe pour les longues journées."
   }
 };
 
@@ -1129,7 +1193,9 @@ const els = {
   storeCopy: document.querySelector("#storeCopy"),
   storeActions: document.querySelector("#storeActions"),
   downloadStack: document.querySelector("#downloadStackButton"),
-  tipsButton: document.querySelector("#tipsButton")
+  menuButton: document.querySelector("#menuButton"),
+  guideMenu: document.querySelector("#guideMenu"),
+  closeMenu: document.querySelector("#closeMenu")
 };
 
 function t(key, ...args) {
@@ -1140,6 +1206,88 @@ function t(key, ...args) {
 function local(value) {
   if (typeof value === "string") return value;
   return value[state.lang] || value.en || "";
+}
+
+const sectionAnchors = new Set(["top", "basics", "apps", "compare", "tips"]);
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const hashFilterMap = {
+  payments: { category: "payment", pack: "payments" },
+  transport: { pack: "transport" },
+  food: { category: "food", pack: "food" },
+  shopping: { category: "shopping", pack: "shopping" },
+  student: { pack: "student" },
+  longstay: { pack: "longstay" }
+};
+
+function applyFilterState(key) {
+  const explicit = hashFilterMap[key];
+  if (explicit) {
+    state.category = explicit.category || "all";
+    state.pack = explicit.pack || "all";
+    state.query = "";
+    return true;
+  }
+
+  const category = categories.find((item) => item.id === key && item.id !== "all");
+  if (category) {
+    state.category = category.id;
+    state.pack = "all";
+    state.query = "";
+    return true;
+  }
+
+  const pack = packs.find((item) => item.id === key);
+  if (pack) {
+    state.pack = pack.id;
+    state.category = "all";
+    state.query = "";
+    return true;
+  }
+
+  if (key === "all") {
+    state.category = "all";
+    state.pack = "all";
+    state.query = "";
+    return true;
+  }
+
+  return false;
+}
+
+function scrollToId(id, smooth = true) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  target.scrollIntoView({
+    behavior: smooth && !prefersReducedMotion ? "smooth" : "auto",
+    block: "start"
+  });
+}
+
+function updateHash(key) {
+  const nextHash = key ? `#${key}` : "";
+  history.replaceState(null, "", `${location.pathname}${location.search}${nextHash}`);
+}
+
+function setActiveNav(id) {
+  document.querySelectorAll(".bottom-nav a[data-nav]").forEach((link) => {
+    const isActive = link.dataset.nav === id;
+    link.classList.toggle("active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "location");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+function openMenu() {
+  if (!els.guideMenu.open) els.guideMenu.showModal();
+  els.menuButton.setAttribute("aria-expanded", "true");
+}
+
+function closeMenu() {
+  if (els.guideMenu.open) els.guideMenu.close();
+  els.menuButton.setAttribute("aria-expanded", "false");
 }
 
 function getAppCategories(app) {
@@ -1195,7 +1343,7 @@ function renderI18n() {
 
 function renderStarters() {
   els.starterGrid.innerHTML = packs.map((pack) => `
-    <button class="starter-card ${state.pack === pack.id ? "active" : ""}" type="button" data-pack="${pack.id}" style="--starter-bg: ${pack.color}">
+    <button id="${pack.id}" class="starter-card ${state.pack === pack.id ? "active" : ""}" type="button" data-pack="${pack.id}" style="--starter-bg: ${pack.color}">
       <span class="starter-icon">${iconSvg(pack.icon)}</span>
       <strong>${local(pack.label)}</strong>
       <small>${local(pack.desc)} · ${pack.appIds.length}</small>
@@ -1238,7 +1386,10 @@ function getFilteredApps() {
 
 function renderApps() {
   const filtered = getFilteredApps();
-  els.resultsNote.textContent = t("results", filtered.length);
+  const activePack = packs.find((pack) => pack.id === state.pack);
+  els.resultsNote.textContent = activePack
+    ? `${local(activePack.label)} · ${t("results", filtered.length)}`
+    : t("results", filtered.length);
   els.emptyState.classList.toggle("hidden", filtered.length > 0);
   els.appList.innerHTML = filtered.map((app, index) => `
     <button class="app-card" type="button" data-app="${app.id}" aria-label="${t("viewDetails")}: ${app.en}" style="--reveal-delay: ${Math.min(index * 35, 420)}ms">
@@ -1328,6 +1479,27 @@ function closeDialog(dialog) {
 }
 
 document.addEventListener("click", (event) => {
+  const anchor = event.target.closest('a[href^="#"]');
+  if (anchor) {
+    const key = decodeURIComponent(anchor.getAttribute("href").slice(1));
+    if (sectionAnchors.has(key)) {
+      event.preventDefault();
+      history.pushState(null, "", `#${key}`);
+      setActiveNav(key === "apps" ? "basics" : key);
+      scrollToId(key);
+      if (anchor.closest("#guideMenu")) closeMenu();
+      return;
+    }
+    if (applyFilterState(key)) {
+      event.preventDefault();
+      history.pushState(null, "", `#${key}`);
+      renderAll();
+      requestAnimationFrame(() => scrollToId("apps"));
+      if (anchor.closest("#guideMenu")) closeMenu();
+      return;
+    }
+  }
+
   const langButton = event.target.closest(".lang-button");
   if (langButton) {
     state.lang = langButton.dataset.lang;
@@ -1340,7 +1512,10 @@ document.addEventListener("click", (event) => {
   if (starter) {
     state.pack = starter.dataset.pack;
     state.category = "all";
+    state.query = "";
     renderAll();
+    updateHash(state.pack === "all" ? "apps" : state.pack);
+    setActiveNav("basics");
     return;
   }
 
@@ -1348,7 +1523,9 @@ document.addEventListener("click", (event) => {
   if (filter) {
     state.category = filter.dataset.category;
     state.pack = "all";
+    state.query = "";
     renderAll();
+    updateHash(state.category === "all" ? "apps" : state.category);
     return;
   }
 
@@ -1383,11 +1560,50 @@ els.downloadStack.addEventListener("click", () => {
   const activePack = packs.find((pack) => pack.id === state.pack) || packs.find((pack) => pack.id === "arrival");
   openStoreDialog(apps.filter((app) => activePack.appIds.includes(app.id)));
 });
-els.tipsButton.addEventListener("click", () => {
-  els.storeTitle.textContent = t("tipsTitle");
-  els.storeCopy.textContent = t("tipsBody");
-  els.storeActions.innerHTML = "";
-  els.storeDialog.showModal();
+els.menuButton.addEventListener("click", () => {
+  if (els.guideMenu.open) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+els.closeMenu.addEventListener("click", closeMenu);
+els.guideMenu.addEventListener("click", (event) => {
+  if (event.target === els.guideMenu) closeMenu();
+});
+els.guideMenu.addEventListener("close", () => els.menuButton.setAttribute("aria-expanded", "false"));
+
+window.addEventListener("hashchange", () => {
+  const key = decodeURIComponent(location.hash.replace(/^#/, ""));
+  if (sectionAnchors.has(key)) {
+    setActiveNav(key === "apps" ? "basics" : key);
+    scrollToId(key);
+    return;
+  }
+  if (key && applyFilterState(key)) {
+    renderAll();
+    requestAnimationFrame(() => scrollToId("apps"));
+  }
 });
 
+const initialHash = decodeURIComponent(location.hash.replace(/^#/, ""));
+const hasInitialFilter = initialHash ? applyFilterState(initialHash) : false;
 renderAll();
+if (hasInitialFilter) {
+  const scrollToFilteredApps = () => scrollToId("apps", false);
+  window.addEventListener("load", scrollToFilteredApps, { once: true });
+  if (document.readyState === "complete") scrollToFilteredApps();
+}
+
+if ("IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) setActiveNav(entry.target.id);
+    });
+  }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+  ["top", "basics", "compare", "tips"].forEach((id) => {
+    const section = document.getElementById(id);
+    if (section) navObserver.observe(section);
+  });
+}

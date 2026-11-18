@@ -12,10 +12,12 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#apps" data-i18n="skipToGuide">Skip to the app guide</a>
+
   <div class="page-shell">
     <header class="hero">
       <nav class="topbar" aria-label="Main navigation">
-        <button class="icon-button" type="button" aria-label="Open guide menu">
+        <button class="icon-button" id="menuButton" type="button" aria-label="Open guide menu" aria-expanded="false" aria-controls="guideMenu">
           <span></span>
           <span></span>
           <span></span>
@@ -42,7 +44,7 @@
         <input id="searchInput" type="search" autocomplete="off" placeholder="Search apps, tasks, or setup tips">
       </form>
 
-      <section class="starter-section" aria-labelledby="starterTitle">
+      <section class="starter-section" id="basics" aria-labelledby="starterTitle">
         <div class="section-heading">
           <h2 id="starterTitle" data-i18n="starterPacks">Starter packs</h2>
           <button class="text-button" type="button" data-pack="all" data-i18n="seeAll">See all</button>
@@ -52,7 +54,7 @@
     </header>
 
     <main>
-      <section class="guide-toolbar" aria-label="Guide filters">
+      <section class="guide-toolbar" id="apps" aria-label="Guide filters">
         <div>
           <p class="eyebrow" data-i18n="browseByNeed">Browse by need</p>
           <h2 data-i18n="essentialApps">Essential China apps</h2>
@@ -69,7 +71,7 @@
         <p data-i18n="emptyCopy">Try another task, app name, or category.</p>
       </section>
 
-      <section class="comparison-panel" aria-labelledby="compareTitle">
+      <section class="comparison-panel" id="compare" aria-labelledby="compareTitle">
         <p class="eyebrow" data-i18n="quickComparisons">Quick comparisons</p>
         <h2 id="compareTitle" data-i18n="whichOne">Which one should I use?</h2>
         <aside class="payment-callout" aria-labelledby="paymentCalloutTitle">
@@ -92,15 +94,59 @@
           </article>
         </div>
       </section>
+
+      <section class="tips-section" id="tips" aria-labelledby="tipsHeading">
+        <p class="eyebrow" data-i18n="tipsEyebrow">Before you land</p>
+        <h2 id="tipsHeading" data-i18n="tipsTitle">First-week tips</h2>
+        <p class="tips-intro" data-i18n="tipsBody">Install WeChat, Alipay, a map app, and a translation app before landing. Payment and identity rules change, so verify setup requirements in the app before relying on it.</p>
+        <div class="tips-grid">
+          <article class="tip-card">
+            <h3 data-i18n="tipInstallTitle">Install before landing</h3>
+            <p data-i18n="tipInstallBody">Download WeChat, Alipay, Amap, and a translation app while you still have fast, unrestricted Wi-Fi.</p>
+          </article>
+          <article class="tip-card">
+            <h3 data-i18n="tipPayTitle">Set up payments early</h3>
+            <p data-i18n="tipPayBody">Link a Wise or Revolut card in both WeChat Pay and Alipay, then test a small QR payment before depending on it.</p>
+          </article>
+          <article class="tip-card">
+            <h3 data-i18n="tipAddressTitle">Save addresses in Chinese</h3>
+            <p data-i18n="tipAddressBody">Keep your hotel, school, or apartment address in Chinese so taxi drivers and delivery couriers can find you.</p>
+          </article>
+          <article class="tip-card">
+            <h3 data-i18n="tipDataTitle">Stay connected</h3>
+            <p data-i18n="tipDataBody">Arrange roaming or a China eSIM before you fly, and carry a power bank for long days out.</p>
+          </article>
+        </div>
+      </section>
     </main>
   </div>
 
   <nav class="bottom-nav" aria-label="Mobile guide navigation">
-    <a href="#top" class="active"><span>⌂</span><span data-i18n="navHome">Home</span></a>
-    <a href="#starterTitle"><span>▦</span><span data-i18n="navPacks">Packs</span></a>
-    <a href="#compareTitle"><span>◇</span><span data-i18n="navCompare">Compare</span></a>
-    <button type="button" id="tipsButton"><span>?</span><span data-i18n="navTips">Tips</span></button>
+    <a href="#top" class="active" data-nav="top" aria-current="location"><span>⌂</span><span data-i18n="navHome">Home</span></a>
+    <a href="#basics" data-nav="basics"><span>▦</span><span data-i18n="navBasics">Basics</span></a>
+    <a href="#compare" data-nav="compare"><span>◇</span><span data-i18n="navCompare">Compare</span></a>
+    <a href="#tips" data-nav="tips"><span>?</span><span data-i18n="navTips">Tips</span></a>
   </nav>
+
+  <dialog class="guide-menu" id="guideMenu" aria-labelledby="guideMenuTitle">
+    <div class="guide-menu-card">
+      <button class="close-button" type="button" id="closeMenu" aria-label="Close">×</button>
+      <p class="eyebrow" data-i18n="menuEyebrow">Guide sections</p>
+      <h2 id="guideMenuTitle" data-i18n="menuTitle">Jump to</h2>
+      <nav class="guide-menu-links" aria-label="Guide sections">
+        <a href="#basics"><span data-i18n="menuBasics">Basics</span><small data-i18n="menuBasicsNote">Starter packs</small></a>
+        <a href="#apps"><span data-i18n="menuApps">All apps</span><small data-i18n="menuAppsNote">Full list</small></a>
+        <a href="#payments"><span data-i18n="menuPayments">Payments</span><small data-i18n="menuPaymentsNote">WeChat Pay, Alipay, TenPayGo</small></a>
+        <a href="#transport"><span data-i18n="menuTransport">Transport</span><small data-i18n="menuTransportNote">Maps, rides, trains</small></a>
+        <a href="#food"><span data-i18n="menuFood">Food</span><small data-i18n="menuFoodNote">Delivery and local finds</small></a>
+        <a href="#shopping"><span data-i18n="menuShopping">Shopping</span><small data-i18n="menuShoppingNote">Marketplaces and deals</small></a>
+        <a href="#student"><span data-i18n="menuStudent">Student life</span><small data-i18n="menuStudentNote">Study and social</small></a>
+        <a href="#longstay"><span data-i18n="menuLongstay">Long stay</span><small data-i18n="menuLongstayNote">Housing and work</small></a>
+        <a href="#compare"><span data-i18n="menuCompare">Compare apps</span><small data-i18n="menuCompareNote">Which one to use</small></a>
+        <a href="#tips"><span data-i18n="menuTips">First-week tips</span><small data-i18n="menuTipsNote">Before you land</small></a>
+      </nav>
+    </div>
+  </dialog>
 
   <dialog class="app-dialog" id="appDialog" aria-labelledby="dialogTitle">
     <div class="dialog-card">

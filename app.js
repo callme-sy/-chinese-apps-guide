@@ -160,13 +160,13 @@ const translations = {
 };
 
 const packs = [
-  { id: "arrival", icon: "plane", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "amap", "didi", "ctrip", "12306"] },
+  { id: "arrival", icon: "plane", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "yuanbao", "amap", "didi", "ctrip"] },
   { id: "payments", icon: "credit-card", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay", "tenpaygo"] },
-  { id: "transport", icon: "route", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "12306", "ctrip", "qunar", "baidumaps"] },
+  { id: "transport", icon: "route", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "hellobike", "12306", "ctrip", "tripcom", "qunar", "baidumaps"] },
   { id: "food", icon: "utensils", color: "#f3ded3", label: { en: "Eat & Drink", fr: "Manger" }, desc: { en: "Delivery and local finds", fr: "Livraison et adresses" }, appIds: ["meituan", "dianping", "eleme", "luckin", "mixue"] },
   { id: "shopping", icon: "shopping-bag", color: "#f6ecd7", label: { en: "Shop Smart", fr: "Shopping" }, desc: { en: "Marketplaces and deals", fr: "Marchés et promos" }, appIds: ["taobao", "jd", "pinduoduo", "xianyu"] },
   { id: "student", icon: "graduation-cap", color: "#e7edf8", label: { en: "Student Life", fr: "Étudiant" }, desc: { en: "Study, food, socials", fr: "Études et quotidien" }, appIds: ["wechat", "alipay", "meituan", "bilibili", "baicizhan", "xiaohongshu", "neteasemusic"] },
-  { id: "longstay", icon: "home", color: "#e5ecd9", label: { en: "Long Stay", fr: "Long séjour" }, desc: { en: "Housing, work, services", fr: "Logement et travail" }, appIds: ["wechat", "alipay", "beike", "lianjia", "dingtalk", "wecom", "feishu"] }
+  { id: "longstay", icon: "home", color: "#e5ecd9", label: { en: "Long Stay", fr: "Long séjour" }, desc: { en: "Housing, work, services", fr: "Logement et travail" }, appIds: ["wechat", "alipay", "beike", "lianjia", "ziroom", "wellcee", "dingtalk", "wecom", "feishu"] }
 ];
 
 const categories = [
@@ -289,14 +289,14 @@ const apps = [
     icon: "元",
     color: "#2f6fde",
     essential: false,
-    desc: { en: "Tencent's free AI assistant with Hunyuan and DeepSeek models, plus a live translation mode for travel.", fr: "L'assistant IA gratuit de Tencent avec les modèles Hunyuan et DeepSeek, et un mode de traduction en direct pour les voyages." },
+    desc: { en: "Tencent's free AI assistant with Hunyuan and DeepSeek models, plus a live English–Chinese translation mode that is especially useful for travel.", fr: "L'assistant IA gratuit de Tencent avec les modèles Hunyuan et DeepSeek, et un mode de traduction anglais–chinois en direct particulièrement utile en voyage." },
     tags: ["AI", "Translation", "Free"],
-    badge: { en: "Free + translation", fr: "Gratuit + traduction" },
+    badge: { en: "Best live translator", fr: "Meilleur traducteur live" },
     badgeType: "good",
-    note: { en: "Best free AI all-rounder", fr: "Le plus complet gratuit" },
+    note: { en: "Live English–Chinese translation", fr: "Traduction anglais–chinois en direct" },
     setup: { en: "Easy", fr: "Facile" },
     foreigner: { en: "Chinese-first, English replies work", fr: "Interface chinoise, réponses en anglais possibles" },
-    bestFor: { en: "Free AI and live translation", fr: "IA gratuite et traduction en direct" },
+    bestFor: { en: "Live translation and free AI", fr: "Traduction en direct et IA gratuite" },
     steps: {
       en: ["Install Tencent Yuanbao.", "Sign in with WeChat or QQ if possible.", "Switch between Hunyuan and DeepSeek models.", "Open translation mode for live conversations."],
       fr: ["Installez Tencent Yuanbao.", "Connectez-vous avec WeChat ou QQ si possible.", "Passez d'un modèle Hunyuan à DeepSeek.", "Ouvrez le mode traduction pour les conversations en direct."]
@@ -452,6 +452,31 @@ const apps = [
     caution: { en: "Airport pickup zones can be confusing; follow in-app instructions carefully.", fr: "Les zones de prise en charge à l'aéroport peuvent être complexes." },
     similar: "Uber",
     store: "DiDi"
+  },
+  {
+    id: "hellobike",
+    cn: "哈啰单车",
+    en: "HelloBike",
+    category: "bike",
+    categories: ["bike"],
+    icon: "哈",
+    color: "#00a1e9",
+    essential: false,
+    desc: { en: "Hello's shared-bike app for unlocking bikes by QR code; also available inside Alipay.", fr: "L'app de vélos partagés Hello pour déverrouiller un vélo par QR code ; aussi disponible dans Alipay." },
+    tags: ["Bike", "QR unlock"],
+    badge: { en: "In Alipay too", fr: "Aussi dans Alipay" },
+    badgeType: "good",
+    note: { en: "Can use inside Alipay", fr: "Utilisable dans Alipay" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Use Alipay if the app asks for Chinese ID", fr: "Utilisez Alipay si l'app demande un ID chinois" },
+    bestFor: { en: "Short city rides", fr: "Trajets courts en ville" },
+    steps: {
+      en: ["Open HelloBike or the Alipay mini app.", "Scan the bike QR code.", "Confirm unlock and price.", "Park in a marked area and lock the bike."],
+      fr: ["Ouvrez HelloBike ou la mini-app Alipay.", "Scannez le QR du vélo.", "Confirmez le déverrouillage et le prix.", "Garez-vous dans une zone autorisée et verrouillez."]
+    },
+    caution: { en: "The standalone app may ask for Chinese verification; the Alipay mini app is often easier.", fr: "L'app autonome peut demander une vérification chinoise ; la mini-app Alipay est souvent plus simple." },
+    similar: "Lime + Citi Bike",
+    store: "HelloBike"
   },
   {
     id: "meituan",
@@ -671,6 +696,31 @@ const apps = [
     store: "Ctrip"
   },
   {
+    id: "tripcom",
+    cn: "携程国际版",
+    en: "Trip.com",
+    category: "transport",
+    categories: ["transport", "travel"],
+    icon: "Trip",
+    color: "#287dfa",
+    essential: false,
+    desc: { en: "International booking app for flights, hotels, trains, and attractions in China and abroad, with an English-first interface.", fr: "App de réservation internationale pour vols, hôtels, trains et attractions en Chine et à l'étranger, avec interface anglaise." },
+    tags: ["Travel", "Flights", "English"],
+    badge: { en: "English-first", fr: "Interface anglaise" },
+    badgeType: "good",
+    note: { en: "Easier than 12306", fr: "Plus simple que 12306" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Built for international travelers", fr: "Pensé pour les voyageurs internationaux" },
+    bestFor: { en: "Flights, hotels, and trains", fr: "Vols, hôtels et trains" },
+    steps: {
+      en: ["Install Trip.com.", "Search flights, hotels, or trains.", "Pay with an international card.", "Save booking confirmations offline."],
+      fr: ["Installez Trip.com.", "Recherchez vols, hôtels ou trains.", "Payez avec une carte internationale.", "Gardez les confirmations hors ligne."]
+    },
+    caution: { en: "Some rail tickets may still require passport verification; check booking terms.", fr: "Certains billets de train peuvent demander une vérification du passeport ; vérifiez les conditions." },
+    similar: "Booking.com + Expedia",
+    store: "Trip.com"
+  },
+  {
     id: "dingtalk",
     cn: "钉钉",
     en: "DingTalk",
@@ -759,6 +809,56 @@ const restoredOriginalApps = [
     caution: { en: "Listings can move quickly in major cities.", fr: "Les annonces partent vite dans les grandes villes." },
     similar: "Real estate agency app",
     store: "Lianjia"
+  },
+  {
+    id: "ziroom",
+    cn: "自如",
+    en: "Ziroom",
+    category: "realestate",
+    categories: ["realestate", "longstay"],
+    icon: "自",
+    color: "#00a870",
+    essential: false,
+    desc: { en: "Long-term apartment rentals with furnished rooms and roommate-friendly listings, popular with young professionals in major cities.", fr: "Locations de longue durée avec chambres meublées et colocations, populaires auprès des jeunes actifs des grandes villes." },
+    tags: ["Housing", "Rentals", "Long stay"],
+    badge: { en: "Long-stay rentals", fr: "Locations longue durée" },
+    badgeType: "good",
+    note: { en: "Furnished apartments", fr: "Appartements meublés" },
+    setup: { en: "Medium", fr: "Moyenne" },
+    foreigner: { en: "Chinese-first; use with local help", fr: "Interface chinoise ; avec aide locale" },
+    bestFor: { en: "Furnished long-term rentals", fr: "Locations meublées longue durée" },
+    steps: {
+      en: ["Browse by city and neighborhood.", "Filter by budget and room type.", "Ask about deposits and contract terms.", "Visit before signing or paying."],
+      fr: ["Explorez par ville et quartier.", "Filtrez par budget et type de chambre.", "Renseignez-vous sur les dépôts et le bail.", "Visitez avant de signer ou payer."]
+    },
+    caution: { en: "Contracts, deposits, and roommate rules need local review.", fr: "Contrats, dépôts et règles de colocation doivent être vérifiés localement." },
+    similar: "Zillow + Airbnb long stays",
+    store: "Ziroom"
+  },
+  {
+    id: "wellcee",
+    cn: "唯心所寓",
+    en: "Wellcee",
+    category: "realestate",
+    categories: ["realestate", "longstay"],
+    icon: "W",
+    color: "#e94b6b",
+    essential: false,
+    desc: { en: "English-friendly housing platform for apartments and shared flats, popular with foreigners and international students.", fr: "Plateforme de logement en anglais pour appartements et colocations, populaire auprès des étrangers et étudiants internationaux." },
+    tags: ["Housing", "English-friendly", "Long stay"],
+    badge: { en: "English-friendly", fr: "Adaptée aux étrangers" },
+    badgeType: "good",
+    note: { en: "Good for foreigners", fr: "Bien pour les étrangers" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "English interface and international community", fr: "Interface anglaise et communauté internationale" },
+    bestFor: { en: "Apartments and shared flats", fr: "Appartements et colocations" },
+    steps: {
+      en: ["Browse city and neighborhood listings.", "Filter by budget and room type.", "Message landlords or roommates.", "Visit and verify the contract before paying."],
+      fr: ["Parcourez les annonces par ville et quartier.", "Filtrez par budget et type de chambre.", "Contactez propriétaires ou colocataires.", "Visitez et vérifiez le contrat avant de payer."]
+    },
+    caution: { en: "Verify listings and never pay a deposit before viewing.", fr: "Vérifiez les annonces et ne payez jamais de dépôt avant une visite." },
+    similar: "SpareRoom + Zillow",
+    store: "Wellcee"
   },
   {
     id: "eleme",
@@ -1172,6 +1272,10 @@ const iconAssets = {
     iosUrl: "https://apps.apple.com/cn/app/%E6%BB%B4%E6%BB%B4%E5%9B%BD%E9%99%85%E7%89%88-%E5%A2%83%E5%A4%96%E5%87%BA%E8%A1%8C-%E8%BD%BB%E6%9D%BE%E6%89%93%E8%BD%A6/id1362398401?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.sdu.didi.psnger"
   },
+  hellobike: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c7/9b/f0/c79bf015-e491-9666-bccd-9b9ba44061f3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id1165227346?uo=4"
+  },
   meituan: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b6/4c/cf/b64ccfc6-6775-53aa-b46b-9def7004f84a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E7%BE%8E%E5%9B%A2-%E9%97%AE%E7%BE%8E%E5%9B%A2-%E9%83%BD%E5%AE%89%E6%8E%92/id423084029?uo=4",
@@ -1206,6 +1310,14 @@ const iconAssets = {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/12/02/c5/1202c54c-a228-20af-403f-b9538d23f3a1/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E9%93%BE%E5%AE%B6/id405882753?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.lianjia.beike"
+  },
+  ziroom: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bf/fb/cf/bffbcf17-2ec6-144d-d53f-817f99a75f1b/AppIcon-1x_U007emarketing-0-6-0-85-220-0.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id685872176?uo=4"
+  },
+  wellcee: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ae/f2/2d/aef22daa-e2ce-258b-99ed-8c7f188bd2e5/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id1323479370?uo=4"
   },
   eleme: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/60/54/6c/60546cf7-5d4a-e43f-9bd3-572ba5c624c4/AppIcon_new-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
@@ -1316,6 +1428,10 @@ const iconAssets = {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/f2/ff/61f2ff23-ae77-a3f1-1f2a-cb6fa5a7d5ca/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E6%90%BA%E7%A8%8B%E6%97%85%E8%A1%8C-%E8%AE%A2%E9%85%92%E5%BA%97%E6%9C%BA%E7%A5%A8%E7%81%AB%E8%BD%A6%E7%A5%A8/id379395415?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=ctrip.android.view"
+  },
+  tripcom: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/56/f9/fe/56f9fe7f-36ad-50d2-9ef8-8e40537ed0c2/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/trip-com-book-flights-hotels/id681752345?uo=4"
   },
   dingtalk: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/10/c8/2810c844-3cce-03d3-403f-c09570ed501a/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",

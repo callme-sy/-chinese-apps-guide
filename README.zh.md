@@ -24,6 +24,7 @@ https://github.com/chris-topher-code/-chinese-apps-guide
 - AI 与搜索精选：腾讯元宝（混元 + DeepSeek，实时翻译）、DeepSeek、Kimi、豆包，以及作为 Google 替代的 Bing。
 - 租房与出行新增：自如、Wellcee、Trip.com 和哈啰单车（也可在支付宝内使用）。到达基础包现在用元宝替代 12306，并用 Trip.com 替代携程。
 - 2026 年 VPN 推荐：Mullvad（技术上最好，但对非技术用户较难）、Astrill（稳定但有时较慢，适合大多数人）和 Surfshark（简单便宜，需要 No Border 模式，并非 100% 可用）。
+- 充电宝警告：没有 CCC 认证的充电宝不得带上中国航班，并会在机场被永久没收。
 - 对容易重复的概念做合并：WeChat Pay 放进 WeChat 说明里，不再作为第二张 WeChat 卡片展示。
 - 在支付区域用醒目样式强烈建议在微信支付和支付宝中绑定 Wise 或 Revolut 卡。
 - 应用卡片使用真实远程应用图标，并保留本地首字 fallback。

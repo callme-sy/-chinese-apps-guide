@@ -24,6 +24,7 @@ Elle inclut :
 - Sélection IA et recherche : Tencent Yuanbao (Hunyuan + DeepSeek, traduction en direct), DeepSeek, Kimi, Doubao et Bing comme alternative à Google.
 - Ajouts logement et transport : Ziroom, Wellcee, Trip.com et HelloBike (aussi disponible dans Alipay). Arrivée utilise désormais Yuanbao au lieu de 12306 et Trip.com au lieu de Ctrip.
 - VPN pour 2026 : Mullvad (techniquement le meilleur mais plus difficile pour les non-techniciens), Astrill (stable mais parfois lent ; recommandé pour la plupart) et Surfshark (simple et bon marché, mode No Border, pas fiable à 100 %).
+- Avertissement batteries externes : les batteries sans certification CCC ne sont pas autorisées à bord des vols en Chine et sont confisquées définitivement à l'aéroport.
 - Les concepts en doublon sont regroupés quand c'est plus clair : WeChat Pay est couvert dans WeChat au lieu d'apparaître comme une deuxième carte WeChat.
 - Une recommandation forte pour lier une carte Wise ou Revolut à WeChat Pay et à Alipay.
 - Cartes pratiques avec vraies icônes distantes, badges de configuration et initiales de secours.

@@ -88,7 +88,9 @@ const translations = {
     tipAddressTitle: "Save addresses in Chinese",
     tipAddressBody: "Keep your hotel, school, or apartment address in Chinese so taxi drivers and delivery couriers can find you.",
     tipDataTitle: "Stay connected",
-    tipDataBody: "Arrange roaming or a China eSIM before you fly, and carry a power bank for long days out."
+    tipDataBody: "Arrange roaming or a China eSIM before you fly, and carry a power bank for long days out.",
+    tipPowerBankTitle: "Power bank warning",
+    tipPowerBankBody: "Power banks without CCC certification are not allowed on flights in China. Airport security confiscates them permanently — even expensive ones. Check for the CCC mark before you fly."
   },
   fr: {
     eyebrow: "Guide de survie pour la première semaine",
@@ -179,7 +181,9 @@ const translations = {
     tipAddressTitle: "Gardez les adresses en chinois",
     tipAddressBody: "Conservez l'adresse de votre hôtel, école ou appartement en chinois pour les taxis et les livreurs.",
     tipDataTitle: "Restez connecté",
-    tipDataBody: "Activez l'itinérance ou une eSIM Chine avant le départ, et emportez une batterie externe pour les longues journées."
+    tipDataBody: "Activez l'itinérance ou une eSIM Chine avant le départ, et emportez une batterie externe pour les longues journées.",
+    tipPowerBankTitle: "Avertissement batterie externe",
+    tipPowerBankBody: "Les batteries externes sans certification CCC ne sont pas autorisées à bord des vols en Chine. La sécurité de l'aéroport les confisque définitivement — même si elles sont chères. Vérifiez le marquage CCC avant de prendre l'avion."
   }
 };
 

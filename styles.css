@@ -841,6 +841,24 @@ main {
   line-height: 1.45;
 }
 
+.tip-card-warning {
+  grid-column: 1 / -1;
+  border: 2px solid var(--red);
+  background: var(--red-soft);
+}
+
+.tip-card-warning h3 {
+  color: var(--red);
+}
+
+.tip-card-warning h3::before {
+  content: "⚠ ";
+}
+
+.tip-card-warning p {
+  color: #5f2a24;
+}
+
 .comparison-grid p,
 .dialog-card p,
 .store-card p {

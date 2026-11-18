@@ -12,7 +12,10 @@ const translations = {
     downloadStack: "Get starter stack",
     quickComparisons: "Quick comparisons",
     whichOne: "Which one should I use?",
-    paymentCompare: "Use both if possible. WeChat Pay is everywhere socially; Alipay is often smoother for travel, utilities, and foreign card setup.",
+    paymentCalloutLabel: "Strong payment recommendation",
+    paymentCalloutTitle: "Link a Wise or Revolut card to both WeChat and Alipay before you arrive.",
+    paymentCalloutBody: "This is the single most important payment step for foreigners. A Wise or Revolut card lets you spend directly from your foreign account at QR payment terminals across China. Link the same card in WeChat Pay AND Alipay so you can pay almost anywhere — even at shops that accept only one of them. Test a small payment before you rely on it.",
+    paymentCompare: "Use WeChat Pay and Alipay together if possible: WeChat Pay is everywhere socially, while Alipay is often smoother for travel, utilities, and foreign card setup. TenPayGo is the new Tencent option for visitors who want to pay without a WeChat account.",
     shoppingCompare: "Taobao has everything, JD is stronger for reliable electronics and delivery, Pinduoduo is deal-heavy but harder for beginners.",
     transportCompare: "Amap is the map and transit brain. Didi is the ride-hailing backup when public transport is not enough.",
     navHome: "Home",
@@ -54,7 +57,10 @@ const translations = {
     downloadStack: "Obtenir le pack essentiel",
     quickComparisons: "Comparaisons rapides",
     whichOne: "Laquelle utiliser ?",
-    paymentCompare: "Utilisez les deux si possible. WeChat Pay est partout dans les usages sociaux ; Alipay est souvent plus pratique pour le voyage, les services et les cartes étrangères.",
+    paymentCalloutLabel: "Recommandation forte — paiement",
+    paymentCalloutTitle: "Liez une carte Wise ou Revolut à WeChat ET à Alipay avant d'arriver.",
+    paymentCalloutBody: "C'est l'étape de paiement la plus importante pour un étranger. Une carte Wise ou Revolut vous permet de dépenser directement depuis votre compte étranger sur les terminaux de paiement QR partout en Chine. Liez la même carte dans WeChat Pay ET dans Alipay pour payer presque partout, même chez les commerçants qui n'acceptent qu'un seul des deux. Testez un petit paiement avant d'en dépendre.",
+    paymentCompare: "Utilisez WeChat Pay et Alipay ensemble si possible : WeChat Pay est partout dans les usages sociaux, tandis qu'Alipay est souvent plus pratique pour le voyage, les services et les cartes étrangères. TenPayGo est la nouvelle option de Tencent pour les visiteurs qui veulent payer sans compte WeChat.",
     shoppingCompare: "Taobao a presque tout, JD est plus fiable pour l'électronique et la livraison, Pinduoduo est très orienté promotions mais moins simple pour débuter.",
     transportCompare: "Amap est le cerveau pour cartes et transports. Didi sert de solution de secours pour les taxis et voitures privées.",
     navHome: "Accueil",
@@ -87,7 +93,7 @@ const translations = {
 
 const packs = [
   { id: "arrival", icon: "plane", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "amap", "didi", "ctrip", "12306"] },
-  { id: "payments", icon: "credit-card", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay"] },
+  { id: "payments", icon: "credit-card", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay", "tenpaygo"] },
   { id: "transport", icon: "route", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "12306", "ctrip", "qunar", "baidumaps"] },
   { id: "food", icon: "utensils", color: "#f3ded3", label: { en: "Eat & Drink", fr: "Manger" }, desc: { en: "Delivery and local finds", fr: "Livraison et adresses" }, appIds: ["meituan", "dianping", "eleme", "luckin", "mixue"] },
   { id: "shopping", icon: "shopping-bag", color: "#f6ecd7", label: { en: "Shop Smart", fr: "Shopping" }, desc: { en: "Marketplaces and deals", fr: "Marchés et promos" }, appIds: ["taobao", "jd", "pinduoduo", "xianyu"] },
@@ -178,6 +184,32 @@ const apps = [
     caution: { en: "Foreign card support can vary by card, merchant, and policy changes.", fr: "Les cartes étrangères peuvent dépendre de la carte, du commerçant et des règles du moment." },
     similar: "Apple Pay + PayPal + local services",
     store: "Alipay"
+  },
+  {
+    id: "tenpaygo",
+    cn: "腾讯支付",
+    en: "TenPayGo",
+    aliases: ["TencentPay", "Tencent Pay", "Weixin Pay"],
+    category: "payment",
+    categories: ["payment", "travel"],
+    icon: "腾",
+    color: "#07c160",
+    essential: false,
+    desc: { en: "Tencent's new payment app for overseas visitors: pay at any Weixin Pay merchant with an international card or Apple Pay, no WeChat account required.", fr: "La nouvelle app de paiement de Tencent pour les visiteurs étrangers : payez chez tout commerçant Weixin Pay avec une carte internationale ou Apple Pay, sans compte WeChat." },
+    tags: ["Payments", "Travel", "No WeChat needed"],
+    badge: { en: "New for visitors", fr: "Nouveau pour visiteurs" },
+    badgeType: "good",
+    note: { en: "Tencent's new visitor app", fr: "La nouvelle app visiteurs de Tencent" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Built for overseas visitors", fr: "Pensé pour les visiteurs étrangers" },
+    bestFor: { en: "Tourists without WeChat", fr: "Touristes sans WeChat" },
+    steps: {
+      en: ["Install TenPayGo before you travel.", "Register with an email address.", "Link an international card or Apple Pay.", "Scan Weixin Pay QR codes to pay."],
+      fr: ["Installez TenPayGo avant le départ.", "Inscrivez-vous avec une adresse email.", "Liez une carte internationale ou Apple Pay.", "Scannez les QR Weixin Pay pour payer."]
+    },
+    caution: { en: "TenPayGo is a standalone app, separate from WeChat Pay. It only works at Weixin Pay merchants in mainland China, not Alipay; card or currency conversion fees may apply.", fr: "TenPayGo est une app autonome, distincte de WeChat Pay. Elle fonctionne seulement chez les commerçants Weixin Pay en Chine continentale, pas Alipay ; des frais de carte ou de change peuvent s'appliquer." },
+    similar: "WeChat Pay without a WeChat account",
+    store: "TenPayGo"
   },
   {
     id: "amap",
@@ -906,6 +938,11 @@ const iconAssets = {
     iosUrl: "https://apps.apple.com/cn/app/%E6%94%AF%E4%BB%98%E5%AE%9D-%E4%BE%BF%E6%8D%B7%E7%94%9F%E6%B4%BB-%E4%B8%80%E7%82%B9%E5%B0%B1%E5%A5%BD/id333206289?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone"
   },
+  tenpaygo: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6d/5d/c9/6d5dc9e6-0d75-4a7e-67be-e7466f1fa44a/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.jpeg/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/tenpaygo/id6778755338?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.wxpai"
+  },
   amap: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/09/a3/1509a39d-42f1-ee06-0653-9b5863c83819/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208?uo=4",
@@ -1186,6 +1223,7 @@ function getFilteredApps() {
     const haystack = [
       app.cn,
       app.en,
+      ...(app.aliases || []),
       appCategories.join(" "),
       local(app.desc),
       local(app.note),

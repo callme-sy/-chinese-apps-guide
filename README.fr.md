@@ -18,8 +18,9 @@ Elle inclut :
 - Packs de départ pour l'arrivée, les paiements, le transport, les repas, le shopping, la vie étudiante et les longs séjours.
 - Recherche par nom d'app, nom chinois, besoin, catégorie ou conseil de configuration.
 - Filtres par catégories.
-- Couverture complète des apps du projet original, avec Dianping en plus.
+- Couverture complète des apps du projet original, avec Dianping et TenPayGo en plus.
 - Les concepts en doublon sont regroupés quand c'est plus clair : WeChat Pay est couvert dans WeChat au lieu d'apparaître comme une deuxième carte WeChat.
+- Une recommandation forte pour lier une carte Wise ou Revolut à WeChat Pay et à Alipay.
 - Cartes pratiques avec vraies icônes distantes, badges de configuration et initiales de secours.
 - Dialogues de détail avec étapes de configuration, avertissements, équivalents occidentaux et cas d'usage.
 - Choix de plateforme pour ouvrir une page App Store iOS directe, une fiche/recherche Android ou une recherche web.
@@ -80,4 +81,4 @@ Les cartes pointent vers des images publiques de l'App Store quand elles sont di
 
 ## Compatibilité avec le projet original
 
-La liste conserve toutes les apps du projet original au lieu de réduire le périmètre. Elle ajoute aussi Dianping, traite WeChat comme app sociale et de paiement, regroupe WeChat Pay dans WeChat pour éviter les doublons, et nomme 携程 Ctrip pour le contexte de l'app chinoise.
+La liste conserve toutes les apps du projet original au lieu de réduire le périmètre. Elle ajoute aussi Dianping et TenPayGo, traite WeChat comme app sociale et de paiement, regroupe WeChat Pay dans WeChat pour éviter les doublons, et nomme 携程 Ctrip pour le contexte de l'app chinoise.
